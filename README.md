@@ -45,8 +45,8 @@ Learning of the embedding is handled by the `src/graph2vec.py` script which prov
   --epochs INT                    Number of training epochs.                        Default is 1.
   --min-count INT                 Minimal feature count to keep.                    Default is 5.
   --wl-iterations INT             Number of feature extraction recursions.          Default is 2.
-  --learning-rate FLOAT           Initial learning rate.			                      Default is 0.025.
-  --down-sampling FLOAT           Down sampling rate for frequent features.			    Default is 0.0001.
+  --learning-rate FLOAT           Initial learning rate.	                          Default is 0.025.
+  --down-sampling FLOAT           Down sampling rate for frequent features.         Default is 0.0001.
 ```
 
 ### Examples
