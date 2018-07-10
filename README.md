@@ -35,40 +35,38 @@ Learning of the embedding is handled by the `src/graph2vec.py` script which prov
 #### Input and output options
 
 ```
-  --input-path STR                Input folder.                                     Default is `dataset`/.
+  --input-path STR                Input folder.                                     Default is `dataset/`.
   --output-path STR               Embeddings path.                                  Default is `features/nci1.csv`.
 ```
 #### Model options
 ```
   --dimensions INT                Number of dimensions.                             Default is 128.
-  --clusters INT                  Number of clusters.                               Default is 20.
-  --lambd FLOAT                   KKT penalty.			                    Default is 0.2.
+  --workers INT                   Number of workers.                                Default is 4.
+  --epochs INT                    Number of training epochs.                        Default is 1.
+  --min-count INT                 Minimal feature count to keep.                    Default is 5.
+  --wl-iterations INT             Number of feature extraction recursions.          Default is 2.
+  --learning-rate FLOAT           Initial learning rate.			                      Default is 0.025.
+  --down-sampling FLOAT           Down sampling rate for frequent features.			    Default is 0.0001.
 ```
 
 ### Examples
 
-The following commands learn a graph embedding, cluster centers and writes them to disk. The node representations are ordered by the ID.
+The following commands learn an embedding of the graphs and writes it to disk. The node representations are ordered by the ID.
 
-Creating an MNMF embedding of the default dataset with the default hyperparameter settings. Saving the embedding, cluster centres and the log file at the default path.
-
-```
-python src/main.py
-```
-
-Turning off the model saving.
+Creating a graph2vec embedding of the default dataset with the default hyperparameter settings. Saving the embedding at the default path.
 
 ```
-python src/main.py --dump-matrices False
+python src/graph2vec.py
 ```
 
-Creating an embedding of an other dataset the `Facebook Companies`. Saving the output and the log in a custom place.
+Creating an embedding of an other dataset. Saving the output in a custom place.
 
 ```
-python src/main.py --input data/company_edges.csv  --embedding-output output/embeddings/company_embedding.csv --cluster-mean-output output/cluster_means/company_means.csv
+python src/graph2vec.py --input-path new_data/company_edges.csv  --output-path features/nci2.csv
 ```
 
-Creating a clustered embedding of the default dataset in 128 dimensions and 10 cluster centers.
+Creating an embedding of the default dataset in 32 dimensions.
 
 ```
-python src/main.py --dimensions 128 --clusters 10
+python src/graph2vec.py --dimensions 32
 ```
