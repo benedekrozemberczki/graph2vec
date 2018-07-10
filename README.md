@@ -35,24 +35,14 @@ Learning of the embedding is handled by the `src/graph2vec.py` script which prov
 #### Input and output options
 
 ```
-  --input STR                     Input graph path.                                 Default is `data/food_edges.csv`.
-  --embedding-output STR          Embeddings path.                                  Default is `output/embeddings/food_embedding.csv`.
-  --cluster-mean-output STR       Cluster centers path.                             Default is `output/cluster_means/food_means.csv'`.
-  --log-output STR                Log path.                                         Default is `output/logs/food.log`.
-  --assignment-output STR         Node-cluster assignment dictionary path.          Default is `output/assignments/food.json`.
-  --dump-matrices BOOL            Whether the trained model should be saved.        Default is `True`.
+  --input-path STR                Input folder.                                     Default is `dataset`/.
+  --output-path STR               Embeddings path.                                  Default is `features/nci1.csv`.
 ```
 #### Model options
 ```
-  --dimensions INT                Number of dimensions.                             Default is 16.
+  --dimensions INT                Number of dimensions.                             Default is 128.
   --clusters INT                  Number of clusters.                               Default is 20.
   --lambd FLOAT                   KKT penalty.			                    Default is 0.2.
-  --alpha FLOAT                   Clustering penalty.                               Default is 0.05.
-  --beta FLOAT                    Modularity regularization penalty.                Default is 0.05.
-  --eta FLOAT                     Similarity mixing parameter.                      Default is 5.0.
-  --lower-control FLOAT           Floating point overflow control.                  Default is 10**-15.
-  --iteration-number INT          Number of power iterations.                       Default is 200.
-  --early-stopping INT            Early stopping round number based on modularity.  Default is 3.
 ```
 
 ### Examples
