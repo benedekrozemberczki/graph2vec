@@ -5,9 +5,9 @@ graph2vec is an embedding algorithm which learns representations for a set of gr
 </p>
 
 This repository provides an implementation for graph2vec as it is described in:
-> Community Preserving Network Embedding.
-> Xiao Wang, Peng Cui, Jing Wang, Jain Pei, WenWu Zhu, Shiqiang Yang.
-> Proceedings of the Thirsty-First AAAI conference on Artificial Intelligence (AAAI-17).
+> graph2vec: Learning distributed representations of graphs.
+> Narayanan, Annamalai and Chandramohan, Mahinthan and Venkatesan, Rajasekar and Chen, Lihui and Liu, Yang
+> MLG 2017, 13th International Workshop on Mining and Learning with Graphs (MLGWorkshop 2017).
 
 ### Requirements
 
