@@ -25,21 +25,11 @@ python-louvain    0.11
 
 ### Datasets
 
-The code takes an input graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for the `Facebook Politicians` dataset is included in the  `data/` directory.
-
-### Logging
-
-The models are defined in a way that parameter settings and cluster quality is logged in every single epoch. Specifically we log the followings:
-
-```
-1. Hyperparameter settings.     We save each hyperparameter used in the experiment.
-2. Cluster quality.             Measured by modularity. We calculate it in every epoch.
-3. Runtime.                     We measure the time needed for optimization -- measured by seconds.
-```
+The code takes an input folder with json files. Every file is a graph and files have a numeric index as a name. The json files have two keys. The first key called "edges" corresponds to the edge list of the graph. The second key "features" corresponds to the node features. If the second key is not present the WL machine defaults to use the node degree as a feature.  A sample graph dataset from NCI1 is included in the `dataset/` directory.
 
 ### Options
 
-Learning of the embedding is handled by the `src/main.py` script which provides the following command line arguments.
+Learning of the embedding is handled by the `src/graph2vec.py` script which provides the following command line arguments.
 
 #### Input and output options
 
