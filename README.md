@@ -1,10 +1,10 @@
 # graph2vec
 
 <p align="justify">
-M-NMF is a graph embedding algorithm which learns a clustering based on features extracted with non-negative matrix factorization. The procedure places nodes in an abstract feature space where the inner product of node features reconstructs a proximity based matrix representation of the graph. M-NMF has a quadratic runtime complexity in the number of nodes. This implementation supports GPU use (Tensorflow).
+graph2vec is an embedding algorithm which learns representations for a set of graphs using an implicit factorization machine. The procedure places ngraphs in an abstract feature space where graphs with similar structural properties are clustered together. Graph2vec has a linear runtime complexity in the number of graphs in the dataset. This specific implementation supports multi-core data processing in the feature extraction and factorization phases. (So far this is the only implementation which achieves this).
 </p>
 
-This repository provides an implementation for M-NMF as it is described in:
+This repository provides an implementation for graph2vec as it is described in:
 > Community Preserving Network Embedding.
 > Xiao Wang, Peng Cui, Jing Wang, Jain Pei, WenWu Zhu, Shiqiang Yang.
 > Proceedings of the Thirsty-First AAAI conference on Artificial Intelligence (AAAI-17).
