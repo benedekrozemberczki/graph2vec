@@ -17,10 +17,11 @@ networkx          1.11
 tqdm              4.19.5
 numpy             1.13.3
 pandas            0.20.3
-tensorflow-gpu    1.3.0
 jsonschema        2.6.0
-texttable         1.2.1
-python-louvain    0.11
+joblib            0.11
+gensim            3.1.0.
+numpy             1.14.3
+logging           0.4.9.6  
 ```
 
 ### Datasets
