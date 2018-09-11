@@ -33,8 +33,8 @@ def parameter_parser():
 
     parser.add_argument('--epochs',
                         type = int,
-                        default = 1,
-	                help = 'Number of dimensions. Default is 10.')
+                        default = 10,
+	                help = 'Number of epochs. Default is 10.')
 
     parser.add_argument('--min-count',
                         type = int,
