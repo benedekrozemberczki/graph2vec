@@ -12,9 +12,9 @@ import numpy.distutils.system_info as sysinfo
 
 logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
 
-class WeisfehlerLehmanMachine:
+class WeisfeilerLehmanMachine:
     """
-    Weisfehler Lehman feature extractor class.
+    Weisfeiler Lehman feature extractor class.
     """
     def __init__(self, graph, features, iterations):
         """
@@ -82,7 +82,7 @@ def feature_extractor(path, rounds):
     :return doc: Document collection object.
     """
     graph, features, name = dataset_reader(path)
-    machine = WeisfehlerLehmanMachine(graph,features,rounds)
+    machine = WeisfeilerLehmanMachine(graph,features,rounds)
     doc = TaggedDocument(words = machine.extracted_features , tags = ["g_" + name])
     return doc
         
