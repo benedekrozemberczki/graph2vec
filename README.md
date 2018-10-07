@@ -36,20 +36,19 @@ The code takes an input folder with json files. Every file is a graph and files 
 Learning of the embedding is handled by the `src/graph2vec.py` script which provides the following command line arguments.
 
 #### Input and output options
-
 ```
-  --input-path STR                Input folder.                                     Default is `dataset/`.
-  --output-path STR               Embeddings path.                                  Default is `features/nci1.csv`.
+  --input-path   STR    Input folder.           Default is `dataset/`.
+  --output-path  STR    Embeddings path.        Default is `features/nci1.csv`.
 ```
 #### Model options
 ```
-  --dimensions INT                Number of dimensions.                             Default is 128.
-  --workers INT                   Number of workers.                                Default is 4.
-  --epochs INT                    Number of training epochs.                        Default is 1.
-  --min-count INT                 Minimal feature count to keep.                    Default is 5.
-  --wl-iterations INT             Number of feature extraction recursions.          Default is 2.
-  --learning-rate FLOAT           Initial learning rate.                            Default is 0.025.
-  --down-sampling FLOAT           Down sampling rate for frequent features.         Default is 0.0001.
+  --dimensions     INT          Number of dimensions.                             Default is 128.
+  --workers        INT          Number of workers.                                Default is 4.
+  --epochs         INT          Number of training epochs.                        Default is 1.
+  --min-count      INT          Minimal feature count to keep.                    Default is 5.
+  --wl-iterations  INT          Number of feature extraction recursions.          Default is 2.
+  --learning-rate  FLOAT        Initial learning rate.                            Default is 0.025.
+  --down-sampling  FLOAT        Down sampling rate for frequent features.         Default is 0.0001.
 ```
 
 ### Examples
