@@ -1,7 +1,6 @@
 # graph2vec
 
-<p align="justify">
-graph2vec is an embedding algorithm which learns representations for a set of graphs using an implicit factorization machine. The procedure places graphs in an abstract feature space where graphs with similar structural properties (Weisfehler-Lehman features) are clustered together. Graph2vec has a linear runtime complexity in the number of graphs in the dataset which makes it extremely scalable. This specific implementation supports multi-core data processing in the feature extraction and factorization phases. (So far this is the only implementation which support multi-core processing in every phase).
+<p align="justify">Graph2Vec is an embedding algorithm which learns representations for a set of graphs using implicit factorization. The procedure places graphs in an abstract feature space where graphs with similar structural properties (Weisfehler-Lehman features) are clustered together. Graph2Vec has a linear runtime complexity in the number of graphs in the dataset which makes it extremely scalable. This specific implementation supports multi-core data processing in the feature extraction and factorization phases. (So far this is the only implementation which support multi-core processing in every phase).
 </p>
 <p align="center">
   <img width="720" src="graph_embedding.jpeg">
