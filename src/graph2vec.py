@@ -27,7 +27,7 @@ class WeisfeilerLehmanMachine:
         self.graph = graph
         self.features = features
         self.nodes = self.graph.nodes()
-        self.extracted_features = map(lambda x: str(x), features.values())
+        self.extracted_features = [str(v) for k,v in features.items()]
         self.do_recursions()
 
     def do_a_recursion(self):
@@ -39,11 +39,11 @@ class WeisfeilerLehmanMachine:
         for node in self.nodes:
             nebs = self.graph.neighbors(node)
             degs = [self.features[neb] for neb in nebs]
-            features = "_".join([str(self.features[node])]+list(set(sorted(map(lambda x: str(x),degs)))))
+            features = "_".join([str(self.features[node])]+list(set(sorted([str(deg) for deg in degs]))))
             hash_object = hashlib.md5(features.encode())
             hashing = hash_object.hexdigest()
             new_features[node] = hashing
-        self.extracted_features = self.extracted_features + new_features.values()
+        self.extracted_features = self.extracted_features + list(new_features.values())
         return new_features
 
     def do_recursions(self):
@@ -71,7 +71,7 @@ def dataset_reader(path):
     else:
         features = nx.degree(graph)
 
-    features = {int(k):v for k,v, in features.iteritems()}
+    features = {int(k):v for k,v, in features.items()}
     return graph, features, name
 
 def feature_extractor(path, rounds):
@@ -100,7 +100,7 @@ def save_embedding(output_path, model, files, dimensions):
         identifier = f.split("/")[-1].strip(".json")
         out.append([int(identifier)] + list(model.docvecs["g_"+identifier]))
 
-    out = pd.DataFrame(out,columns = ["type"] +map(lambda x: "x_" +str(x), range(0,dimensions)))
+    out = pd.DataFrame(out,columns = ["type"] +["x_" +str(dimension) for dimension in range(dimensions)])
     out = out.sort_values(["type"])
     out.to_csv(output_path, index = None)
 
