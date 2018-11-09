@@ -13,16 +13,16 @@ This repository provides an implementation for graph2vec as it is described in:
 
 ### Requirements
 
-The codebase is implemented in Python 2.7. Package versions used for development are just below.
+The codebase is implemented in Python 3.5.2 | Anaconda 4.2.0 (64-bit). Package versions used for development are just below.
 ```
-networkx          1.11
-tqdm              4.19.5
-numpy             1.13.3
-pandas            0.20.3
 jsonschema        2.6.0
-joblib            0.11
-gensim            3.1.0.
-numpy             1.14.3
+tqdm              4.28.1
+numpy             1.15.4
+pandas            0.23.4
+texttable         1.5.0
+gensim            3.6.0
+networkx          1.11
+joblib            0.13.0
 logging           0.4.9.6  
 ```
 
