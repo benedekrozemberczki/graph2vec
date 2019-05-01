@@ -102,7 +102,6 @@ def save_embedding(output_path, model, files, dimensions):
     out = out.sort_values(["type"])
     out.to_csv(output_path, index = None)
 
-
 def main(args):
     """
     Main function to read the graph list, extract features, learn the embedding and save it.
