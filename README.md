@@ -25,6 +25,7 @@ networkx          1.11
 joblib            0.13.0
 logging           0.4.9.6  
 ```
+Install them by running `pip3 install -r requirements.txt` from the project root.
 
 ### Datasets
 
