@@ -86,7 +86,6 @@ def feature_extractor(path, rounds):
     doc = TaggedDocument(words = machine.extracted_features , tags = ["g_" + name])
     return doc
         
-
 def save_embedding(output_path, model, files, dimensions):
     """
     Function to save the embedding.
