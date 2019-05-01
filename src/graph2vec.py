@@ -53,7 +53,6 @@ class WeisfeilerLehmanMachine:
         for iteration in range(self.iterations):
             self.features = self.do_a_recursion()
         
- 
 def dataset_reader(path):
     """
     Function to read the graph and features from a json file.
