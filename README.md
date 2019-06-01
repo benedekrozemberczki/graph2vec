@@ -11,6 +11,8 @@ This repository provides an implementation for graph2vec as it is described in:
 > Narayanan, Annamalai and Chandramohan, Mahinthan and Venkatesan, Rajasekar and Chen, Lihui and Liu, Yang
 > MLG 2017, 13th International Workshop on Mining and Learning with Graphs (MLGWorkshop 2017).
 
+The original TensorFlow implementation is available [[here]](https://github.com/MLDroid/graph2vec_tf).
+
 ### Requirements
 
 The codebase is implemented in Python 3.5.2 | Anaconda 4.2.0 (64-bit). Package versions used for development are just below.
