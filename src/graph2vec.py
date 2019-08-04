@@ -7,8 +7,8 @@ import networkx as nx
 from tqdm import tqdm
 from joblib import Parallel, delayed
 from parser import parameter_parser
-from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 import numpy.distutils.system_info as sysinfo
+from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 
 logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
 
