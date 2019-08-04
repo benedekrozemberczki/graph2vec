@@ -7,9 +7,7 @@ def parameter_parser():
     The default hyperparameters give a good quality representation without grid search.
     Representations are sorted by ID.
     """
-
     parser = argparse.ArgumentParser(description = "Run Graph2Vec.")
-
 
     parser.add_argument("--input-path",
                         nargs = "?",
