@@ -18,7 +18,7 @@ class WeisfeilerLehmanMachine:
     """
     def __init__(self, graph, features, iterations):
         """
-        Initialization method which executes feature extraction.
+        Initialization method which also executes feature extraction.
         :param graph: The Nx graph object.
         :param features: Feature hash table.
         :param iterations: Number of WL iterations.
@@ -111,6 +111,7 @@ def main(args):
     print("\nFeature extraction started.\n")
     document_collections = Parallel(n_jobs = args.workers)(delayed(feature_extractor)(g, args.wl_iterations) for g in tqdm(graphs))
     print("\nOptimization started.\n")
+    
     model = Doc2Vec(document_collections,
                     size = args.dimensions,
                     window = 0,
