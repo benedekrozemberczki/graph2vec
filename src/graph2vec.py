@@ -10,8 +10,6 @@ from parser import parameter_parser
 import numpy.distutils.system_info as sysinfo
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 
-logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
-
 class WeisfeilerLehmanMachine:
     """
     Weisfeiler Lehman feature extractor class.
