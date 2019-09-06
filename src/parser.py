@@ -1,7 +1,6 @@
 import argparse
 
 def parameter_parser():
-
     """
     A method to parse up command line parameters. By default it gives an embedding of the partial NCI1 graph dataset.
     The default hyperparameters give a good quality representation without grid search.
