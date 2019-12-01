@@ -30,8 +30,8 @@ logging           0.4.9.6
 ```
 
 ### Datasets
-
-The code takes an input folder with json files. Every file is a graph and files have a numeric index as a name. The json files have two keys. The first key called "edges" corresponds to the edge list of the graph. The second key "features" corresponds to the node features. If the second key is not present the WL machine defaults to use the node degree as a feature.  A sample graph dataset from NCI1 is included in the `dataset/` directory.
+<p align="justify">
+The code takes an input folder with json files. Every file is a graph and files have a numeric index as a name. The json files have two keys. The first key called "edges" corresponds to the edge list of the graph. The second key "features" corresponds to the node features. If the second key is not present the WL machine defaults to use the node degree as a feature.  A sample graph dataset from NCI1 is included in the `dataset/` directory.</p>
 
 ### Options
 
@@ -54,10 +54,8 @@ Learning of the embedding is handled by the `src/graph2vec.py` script which prov
 ```
 
 ### Examples
-
-The following commands learn an embedding of the graphs and writes it to disk. The node representations are ordered by the ID.
-
-Creating a graph2vec embedding of the default dataset with the default hyperparameter settings. Saving the embedding at the default path.
+<p align="justify">
+The following commands learn an embedding of the graphs and writes it to disk. The node representations are ordered by the ID. Creating a graph2vec embedding of the default dataset with the default hyperparameter settings. Saving the embedding at the default path.</p>
 
 ```
 python src/graph2vec.py
