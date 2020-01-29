@@ -7,6 +7,8 @@
   <img width="720" src="graph_embedding.jpeg">
 </p>
 
+The model is now also available in the package [Karate Club](https://github.com/benedekrozemberczki/karateclub).
+
 This repository provides an implementation for graph2vec as it is described in:
 > graph2vec: Learning distributed representations of graphs.
 > Narayanan, Annamalai and Chandramohan, Mahinthan and Venkatesan, Rajasekar and Chen, Lihui and Liu, Yang
