@@ -59,18 +59,18 @@ Learning of the embedding is handled by the `src/graph2vec.py` script which prov
 <p align="justify">
 The following commands learn an embedding of the graphs and writes it to disk. The node representations are ordered by the ID. Creating a graph2vec embedding of the default dataset with the default hyperparameter settings. Saving the embedding at the default path.</p>
 
-```
-python src/graph2vec.py
+```sh
+$ python src/graph2vec.py
 ```
 
 Creating an embedding of an other dataset. Saving the output in a custom place.
 
-```
-python src/graph2vec.py --input-path new_data/ --output-path features/nci2.csv
+```sh
+$ python src/graph2vec.py --input-path new_data/ --output-path features/nci2.csv
 ```
 
 Creating an embedding of the default dataset in 32 dimensions.
 
-```
-python src/graph2vec.py --dimensions 32
+```sh
+$ python src/graph2vec.py --dimensions 32
 ```
