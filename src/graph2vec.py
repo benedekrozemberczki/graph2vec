@@ -1,5 +1,6 @@
 """Graph2Vec module."""
 
+import os
 import json
 import glob
 import hashlib
@@ -52,6 +53,10 @@ class WeisfeilerLehmanMachine:
         for _ in range(self.iterations):
             self.features = self.do_a_recursion()
 
+def path2name(path):
+    base = os.path.basename(path)
+    return os.path.splitext(base)[0]
+
 def dataset_reader(path):
     """
     Function to read the graph and features from a json file.
@@ -60,7 +65,7 @@ def dataset_reader(path):
     :return features: Features hash table.
     :return name: Name of the graph.
     """
-    name = path.strip(".json").split("/")[-1]
+    name = path2name(path)
     data = json.load(open(path))
     graph = nx.from_edgelist(data["edges"])
 
@@ -94,8 +99,8 @@ def save_embedding(output_path, model, files, dimensions):
     """
     out = []
     for f in files:
-        identifier = f.split("/")[-1].strip(".json")
-        out.append([int(identifier)] + list(model.docvecs["g_"+identifier]))
+        identifier = path2name(f)
+        out.append([identifier] + list(model.docvecs["g_"+identifier]))
     column_names = ["type"]+["x_"+str(dim) for dim in range(dimensions)]
     out = pd.DataFrame(out, columns=column_names)
     out = out.sort_values(["type"])
@@ -107,7 +112,7 @@ def main(args):
     Learn the embedding and save it.
     :param args: Object with the arguments.
     """
-    graphs = glob.glob(args.input_path + "*.json")
+    graphs = glob.glob(os.path.join(args.input_path, "*.json"))
     print("\nFeature extraction started.\n")
     document_collections = Parallel(n_jobs=args.workers)(delayed(feature_extractor)(g, args.wl_iterations) for g in tqdm(graphs))
     print("\nOptimization started.\n")
