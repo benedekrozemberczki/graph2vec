@@ -71,10 +71,11 @@ def dataset_reader(path):
 
     if "features" in data.keys():
         features = data["features"]
+        features = {int(k): v for k, v in features.items()}
     else:
         features = nx.degree(graph)
-
-    features = {int(k): v for k, v in features.items()}
+        features = {int(k): v for k, v in features}
+       
     return graph, features, name
 
 def feature_extractor(path, rounds):
