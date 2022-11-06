@@ -1,5 +1,5 @@
 Graph2Vec
-------------
+---------
 
 [![Arxiv](https://img.shields.io/badge/ArXiv-1707.05005-orange.svg)](https://arxiv.org/abs/1707.05005) [![codebeat badge](https://codebeat.co/badges/2b0535b8-2106-4570-ae43-e635405c9a0b)](https://codebeat.co/projects/github-com-benedekrozemberczki-graph2vec-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/Graph2Vec.svg)](https://github.com/benedekrozemberczki/Graph2Vec/archive/master.zip) [![benedekrozemberczki](https://img.shields.io/twitter/follow/benrozemberczki?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=benrozemberczki)
 
